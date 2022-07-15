@@ -31,11 +31,10 @@ int main()
     int mx = 0, mn = INF;
     for (int i=0; i<ln; i++) mx = max(mx, arr[i]);
     for (int i=0; i<ln; i++) mn = min(mn, arr[i]);
-    printf("%i\n%i\n%i\n", mx, mn, ln);
     int diff = mx-mn+1;
     int occ_arr[diff] = {0};
     for (int i=0; i<ln; i++) occ_arr[arr[i]-1]++;
-    printf("Occ Array");
+    printf("[+] Occ Array");
     for (int i=0; i<diff; i++) printf("%i\n", occ_arr[i]);
     vector<int> sorted_arr;
     for (int i=0; i<diff; i++){
@@ -44,7 +43,7 @@ int main()
             for (int k=0; k<occ; k++) sorted_arr.push_back(mn+i);
         }
     }
-    printf("[+] Sorted Array ");
+    printf("[+] Sorted Array \n");
     for (int i=0; i<ln; i++){
         printf("%i\n", sorted_arr[i]);
     }
